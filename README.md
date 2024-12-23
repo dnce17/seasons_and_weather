@@ -10,3 +10,6 @@ Currently, two official plugins are available:
 ## Credits
 * Website Design - https://goodjiveet.best/product_details/17403159.html
 * Info on Seasons - https://www.noaa.gov/media/cms-image/meteorological-and-astronomical-seasons-southern-hemisphere-graphic#:~:text=Astronomical%20seasons%3A%20Winter%20begins%20on,on%20the%20summer%20solstice%20(Dec.
+* Hero Images
+    * Winter - eberhard grossgasteiger
+        * https://www.pexels.com/search/winter%20landscape/
