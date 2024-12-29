@@ -9,9 +9,9 @@ const HeroSelector = () => {
   // CAUTION: Dates are ZERO-INDEXED, so Jan = 0, Dec = 11
   // Entering 12 works, but .getMonth() returns 11
   // const today = new Date('2024-12-22'); // YYYY-MM-DD format
-  // const today = new Date('2024-09-23'); // YYYY-MM-DD format
+  const today = new Date('2024-09-23'); // YYYY-MM-DD format
   // const today = new Date('2024-03-23'); // YYYY-MM-DD format
-  const today = new Date('2024-06-23'); // YYYY-MM-DD format
+  // const today = new Date('2024-06-23'); // YYYY-MM-DD format
   // const today = new Date();
 
   // Month and day will only be used, so year is arbitrary
@@ -36,25 +36,25 @@ const HeroSelector = () => {
     if (isInRange) {
       if (season.toLowerCase() == 'winter') {
         return (
-          <Hero hero={ WinterHero } season='Winter' mdBgPos='bg-bottom' textColor='text-sky-200' />
+          <Hero hero={ WinterHero } season='Winter' mdBgPos='bg-bottom' textColor='text-sky-200' dateRange='Dec 21 - Mar 19'/>
         )
       }
 
       if (season.toLowerCase() == 'spring') {
         return (
-          <Hero hero={ SpringHero } season='Spring' mdBgPos='bg-center' textColor='text-pink-400' />
+          <Hero hero={ SpringHero } season='Spring' mdBgPos='bg-center' textColor='text-pink-400' dateRange='Mar 20 - Jun 20'/>
         )
       }
 
       if (season.toLowerCase() == 'summer') {
         return (
-          <Hero hero={ SummerHero } season='Summer' mdBgPos='bg-center' textColor='text-yellow-100' />
+          <Hero hero={ SummerHero } season='Summer' mdBgPos='bg-center' textColor='text-yellow-100' dateRange='Jun 21 - Sep 21'/>
         )
       }
 
       if (season.toLowerCase() == 'autumn') {
         return (
-          <Hero hero={ AutumnHero } season='Autumn' mdBgPos='bg-bottom' textColor='text-orange-600' />
+          <Hero hero={ AutumnHero } season='Autumn' mdBgPos='bg-bottom' textColor='text-orange-600' dateRange='Sep 22 - Dec 20'/>
         )
       }
     }

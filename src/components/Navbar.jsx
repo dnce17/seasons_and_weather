@@ -1,49 +1,58 @@
 import React from 'react';
+import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
+
 import SeasonsLogo from '../assets/imgs/seasons_logo.png'
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
+
+  // Always show nav bar on large screen
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  // Remember if nav bar was visible when users moves b/w large and small screen
+  const [toggleStatus, setToggleStatus] = useState(false);
+
+  const toggleNav = () => {
+    setToggleStatus(!toggleStatus);
+  }
+
+  // Effect to handle screen size changes
+  useEffect(() => {
+    const handleNavResize = () => {
+      // Check if screen width is larger than "md" breakpoint (768px by default in Tailwind)
+      // true = Show nav when the screen is large, false = Hide nav when the screen is small
+      window.innerWidth >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
+    };
+
+    // Run once on component mount and on window resize
+    handleNavResize();
+    window.addEventListener('resize', handleNavResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleNavResize);
+    };
+  }, []);
+  
   return (
-    <div className='bg-yellow-200'>
-      <div className='flex justify-center items-center bg-green-200'>
-        <GiHamburgerMenu className='absolute left-4' size={ 25 }/>
+    <div className='py-2.5 md:flex md:justify-center md:items-center'>
+      <div className='flex justify-center items-center md:left-1/2'>
+        <GiHamburgerMenu className='absolute left-4 md:hidden' size={ 25 } onClick={ toggleNav } />
         <a href='/'>
             <img src={ SeasonsLogo } className='w-56' alt='all four seasons' />
         </a>
       </div>
-      <nav className='flex justify-center'>
-          <ul>
-            <li><a href='#'>Seasons</a></li>
-            <li><a href='#'>Weather</a></li>
-        </ul>
-      </nav>
+      { (toggleStatus || isLargeScreen) && (
+        <nav className='flex justify-center md:absolute md:right-0'>
+          <ul className='md:flex md:self-center'>
+            <li><a href='#' className='mr-5'>Seasons</a></li>
+            <li><a href='#' className='mr-5'>Weather</a></li>
+          </ul>
+        </nav>
+      )}
     </div>
   )
 }
 
 export default Navbar
-
-{/* <div class='ctnr navbar'>
-    <div class='navbar__items'>
-        <div class='nav__toggle'>
-            <img src='/static/img/hamburger-icon.png' class='nav__toggle-icon' alt='hamburger icon toggle button'>
-        </div>
-        <a href='/' class='logo'>
-            <img src='/static/img/logo.png' class='logo__img' alt='ball of yarn with crochet stick'>
-        </a>
-    </div>
-    <nav class='nav d-none'>
-        <ul class='nav__list nav__list--left'>
-            <li class='nav__item'><a href='/' class='nav__link'>Home</a></li>
-            <li class='nav__item'><a href='/shop' class='nav__link'>Shop</a></li>
-        </ul>
-        <ul class='nav__list nav__list--right'>
-            <li class='nav__item'><a href='/login' class='nav__link'>Login</a></li>
-            <li class='nav__item'><a href='/register' class='nav__link'>Sign Up</a></li>
-            <li class='nav__item'><a href='/request' class='nav__link'>Request Order</a></li>
-            <li class='nav__item'><a href='/order' class='nav__link'>Check Orders</a></li>
-            <li class='nav__item'><a href='/cart' class='nav__link'>Cart(<span class='cart-amt'>0</span>)</a></li>
-        </ul>
-    </nav>
-</div> */}
