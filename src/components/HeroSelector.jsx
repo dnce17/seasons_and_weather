@@ -9,10 +9,10 @@ const HeroSelector = () => {
   // CAUTION: Dates are ZERO-INDEXED, so Jan = 0, Dec = 11
   // Entering 12 works, but .getMonth() returns 11
   // const today = new Date('2024-12-22'); // YYYY-MM-DD format
-  const today = new Date('2024-09-23'); // YYYY-MM-DD format
+  // const today = new Date('2024-09-23'); // YYYY-MM-DD format
   // const today = new Date('2024-03-23'); // YYYY-MM-DD format
   // const today = new Date('2024-06-23'); // YYYY-MM-DD format
-  // const today = new Date();
+  const today = new Date();
 
   // Month and day will only be used, so year is arbitrary
   // TODO: Make year dynamic with today.getDate()

@@ -6,7 +6,6 @@ import SeasonCards from '../components/SeasonCards';
 const HomePage = () => {
   return (
     <>
-      <Navbar />
       <HeroSelector />
       <SeasonCards />
     </>

@@ -38,16 +38,16 @@ const Navbar = () => {
   return (
     <div className='py-2.5 md:flex md:justify-center md:items-center'>
       <div className='flex justify-center items-center md:left-1/2'>
-        <GiHamburgerMenu className='absolute left-4 md:hidden' size={ 25 } onClick={ toggleNav } />
-        <a href='/'>
-            <img src={ SeasonsLogo } className='w-56' alt='all four seasons' />
-        </a>
+        <GiHamburgerMenu className='absolute left-4 cursor-pointer md:hidden' size={ 25 } onClick={ toggleNav } />
+        <NavLink to='/' className='select-none'>
+            <img src={ SeasonsLogo } className='w-56 no-underline' alt='all four seasons' />
+        </NavLink>
       </div>
       { (toggleStatus || isLargeScreen) && (
         <nav className='flex justify-center md:absolute md:right-0'>
           <ul className='md:flex md:self-center'>
-            <li><a href='#' className='mr-5'>Seasons</a></li>
-            <li><a href='#' className='mr-5'>Weather</a></li>
+            <li><NavLink to='/' className='mr-5'>Seasons</NavLink></li>
+            <li><NavLink to='/weather' className='mr-5'>Weather</NavLink></li>
           </ul>
         </nav>
       )}
