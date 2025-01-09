@@ -24,7 +24,7 @@ const WeatherPage = () => {
       <SearchBar />
       
       {/* TESTING */}
-      <WeatherFetch />
+      {/* <WeatherFetch /> */}
 
       {/* X Location's Temperature */}
       <section className='bg-green-200 flex flex-col items-center'>
