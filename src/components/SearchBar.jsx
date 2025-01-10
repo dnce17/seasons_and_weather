@@ -3,20 +3,22 @@ import { fetchWeatherApi } from 'openmeteo';
 import { useState, useEffect } from 'react';
 import ResultDropdown from './ResultDropdown';
 
-const SearchBar = () => {
+const SearchBar = ({ setWeatherData }) => {
   const weatherFetch = async (e) => {
     e.preventDefault();
     console.log('submit');
     
     try {
-      // const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${locationData.latitude}&longitude=${locationData.longitude}&current_weather=true&temperature_unit=fahrenheit&timezone=auto`;
-      const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${locationData.latitude}&longitude=${locationData.longitude}&current=temperature_2m,apparent_temperature,wind_speed_10m&hourly=temperature_2m,precipitation_probability&daily=uv_index_max,precipitation_probability_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto`;
-        
+      // const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${locationData.latitude}&longitude=${locationData.longitude}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&hourly=temperature_2m,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,uv_index_max,precipitation_probability_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto`
+      const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${locationData.latitude}&longitude=${locationData.longitude}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&hourly=temperature_2m,weather_code,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,uv_index_max,precipitation_probability_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto`
       const res = await fetch(weatherUrl);
       const data = await res.json();
 
-      // Array.isArray(data.results) ? setData(data.results) : setData([]);
+      // Add location name to JSON
+      data.name = locationData.name;
+      setWeatherData(data);
       console.log(data);
+
     } catch (error) {
       console.log('Error fetching weather data', error);
     }
@@ -26,8 +28,6 @@ const SearchBar = () => {
   const [locationData, setLocationData] = useState(); // Save specific location for fetching weather
   const [query, setQuery] = useState(''); // Save search input
   const [filteredResults, setFilteredResults] = useState([]);
-
-  const [weatherData, setWeatherData] = useState();
 
   // Fetch JSON data on component mount
   useEffect(() => {

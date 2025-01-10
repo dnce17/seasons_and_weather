@@ -1,9 +1,11 @@
 import React from 'react';
-import LocationWeatherCard from '../components/LocationWeatherCard';
+import { useState } from 'react';
 import HourlyWeatherCard from '../components/HourlyWeatherCard';
 import CurrentConditionCard from '../components/CurrentConditionCard';
 import FutureWeatherCard from '../components/FutureWeatherCard';
 import SearchBar from '../components/SearchBar';
+import TemperatureToday from '../components/TemperatureToday';
+import ForecastToday from '../components/ForecastToday';
 
 // Icons
 import { SiAccuweather } from "react-icons/si";
@@ -13,44 +15,16 @@ import { FaTemperatureQuarter } from "react-icons/fa6";
 import { FaSun } from "react-icons/fa";
 import { FaWind } from "react-icons/fa6";
 
-// Test Fetch
-import WeatherFetch from '../components/WeatherFetch';
-
-// MAYBE: Might move each card into one jsx similar to SeasonCards.jsx
+// https://api.open-meteo.com/v1/forecast?latitude=40.7684&longitude=-73.7771&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&hourly=temperature_2m,weather_code,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,uv_index_max,precipitation_probability_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto
 
 const WeatherPage = () => {
+  const [weatherData, setWeatherData] = useState();
+
   return (
-    <>
-      <SearchBar />
-      
-      {/* TESTING */}
-      {/* <WeatherFetch /> */}
-
-      {/* X Location's Temperature */}
-      <section className='bg-green-200 flex flex-col items-center'>
-        <LocationWeatherCard 
-          location='Bayside'
-          icon={ <SiAccuweather size={ 100 } /> }
-          temp='31 F'
-        />
-      </section>
-
-      {/* Today's Forecast */}
-      <section>
-        <h1 className='text-xl font-bold'>Today's Forecast</h1>
-        <div className='flex justify-evenly'>
-          <HourlyWeatherCard 
-            time='6:00 AM' 
-            icon={ <SiAccuweather size={ 50 }/> } 
-            temp='29 F' 
-          />
-          <HourlyWeatherCard time='6:00 AM' icon={ <SiAccuweather size={ 50 }/> } temp='29 F' />
-          <HourlyWeatherCard time='6:00 AM' icon={ <SiAccuweather size={ 50 }/> } temp='29 F' />
-          <HourlyWeatherCard time='6:00 AM' icon={ <SiAccuweather size={ 50 }/> } temp='29 F' />
-          <HourlyWeatherCard time='6:00 AM' icon={ <SiAccuweather size={ 50 }/> } temp='29 F' />
-          <HourlyWeatherCard time='6:00 AM' icon={ <SiAccuweather size={ 50 }/> } temp='29 F' />
-        </div>
-      </section>
+    <div>
+      <SearchBar setWeatherData={ setWeatherData } />
+      <TemperatureToday weatherData={ weatherData } />
+      <ForecastToday weatherData={ weatherData } />
 
       {/* Current Conditions */}
       <section>
@@ -59,22 +33,38 @@ const WeatherPage = () => {
           <CurrentConditionCard 
             icon={ <FaTemperatureQuarter size={ 25 }/> } 
             header='Feels Like' 
-            info='30 F' 
+            info={
+              weatherData
+              ? `${Math.round(weatherData.current.apparent_temperature)}°F`
+              : '-'
+            } 
           />
           <CurrentConditionCard 
             icon={ <MdOutlineWaterDrop size={ 25 }/> } 
             header='Chance of Rain' 
-            info='5%' 
+            info={
+              weatherData
+              ? weatherData.daily.precipitation_probability_max[0]
+              : '-'
+            }
           />
           <CurrentConditionCard 
             icon={ <FaSun size={ 25 }/> } 
             header='UV Index' 
-            info='3' 
+            info={
+              weatherData
+              ? weatherData.daily.uv_index_max[0]
+              : '-'
+            } 
           />
           <CurrentConditionCard 
             icon={ <FaWind size={ 25 }/> } 
             header='Wind' 
-            info='0.2 mi/hr' 
+            info={
+              weatherData
+              ? `${weatherData.current.apparent_temperature} mph`
+              : '-'
+            } 
           />
         </div>
       </section>
@@ -95,7 +85,7 @@ const WeatherPage = () => {
           temp='36 F / 22 F'
         />
       </section>
-    </>
+    </div>
   )
 }
 
