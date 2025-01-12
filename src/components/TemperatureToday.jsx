@@ -3,7 +3,6 @@ import { weatherCategories } from '../../helpers';
 import { FaQuestion } from "react-icons/fa";
 
 const TemperatureToday = ({ weatherData }) => {
-
   let icon;
   if (weatherData) {
     for (const item in weatherCategories) {
@@ -15,8 +14,8 @@ const TemperatureToday = ({ weatherData }) => {
   }
 
   return (
-    <section className='bg-green-200 flex flex-col items-center'>
-      <h1 className='text-4xl font-bold'>
+    <section className='flex flex-col items-center'>
+      <h1 className='text-4xl font-bold text-center'>
         {
           weatherData
             ? weatherData.name
@@ -26,7 +25,9 @@ const TemperatureToday = ({ weatherData }) => {
       { 
         icon 
           ? React.createElement(icon, { size: 100 }) 
-          : <FaQuestion size={100} /> 
+          : <div className="py-4">
+              <FaQuestion size={100} /> 
+            </div>
       }
 
       <h2 className='text-5xl font-bold'>
