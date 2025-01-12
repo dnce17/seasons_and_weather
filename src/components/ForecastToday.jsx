@@ -1,8 +1,7 @@
 import React from 'react';
 import HourlyWeatherCard from '../components/HourlyWeatherCard';
-import { toAnalogTime } from '../../helpers';
+import { toAnalogTime, weatherCategories } from '../../helpers';
 import { FaQuestion } from "react-icons/fa";
-import { weatherCategories } from '../../helpers';
 
 const ForecastToday = ({ weatherData }) => {
 
@@ -35,9 +34,8 @@ const ForecastToday = ({ weatherData }) => {
 						(_, i) => (
 							<HourlyWeatherCard
 								key={i}
-								// time={ toAnalogTime(Date.parse(hourlyTime[i])) }
 								time={
-									// Remove trailing 0's
+									// Removes trailing 0's
 									toAnalogTime(Date.parse(hourlyTime[i])).match(/([0-9]*):00 ([a-zA-z]*)/)[1]
 									+ ' ' +
 									toAnalogTime(Date.parse(hourlyTime[i])).match(/([0-9]*):00 ([a-zA-z]*)/)[2]
@@ -58,4 +56,4 @@ const ForecastToday = ({ weatherData }) => {
 	)
 }
 
-export default ForecastToday
+export default ForecastToday;

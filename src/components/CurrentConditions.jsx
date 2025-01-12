@@ -1,9 +1,7 @@
-import React from 'react';
 import CurrentConditionCard from './CurrentConditionCard';
 import { MdOutlineWaterDrop } from "react-icons/md";
-import { FaTemperatureQuarter } from "react-icons/fa6";
+import { FaTemperatureQuarter, FaWind } from "react-icons/fa6";
 import { FaSun } from "react-icons/fa";
-import { FaWind } from "react-icons/fa6";
 
 const CurrentConditions = ({ weatherData }) => {
   return (
@@ -51,4 +49,4 @@ const CurrentConditions = ({ weatherData }) => {
   )
 }
 
-export default CurrentConditions
+export default CurrentConditions;

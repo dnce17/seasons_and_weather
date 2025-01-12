@@ -1,10 +1,8 @@
-import React from 'react'
-
 const FutureWeatherCard = ({ day, icon, weather, temp }) => {
 	return (
 		<>
 			<div className='flex justify-between items-center [&:not(:last-child)]:border-b-2 border-slate-200 py-4'>
-				{/* NOTE: Width are given to dates, so icons are more centered */}
+				{/* NOTE: Width are given to dates, so that icons are more centered */}
 				<h2 className='text-xl w-16'>{day}</h2>
 				<div className='flex items-center min-[320px]:min-w-36'>
 					{icon}
@@ -16,4 +14,4 @@ const FutureWeatherCard = ({ day, icon, weather, temp }) => {
 	)
 }
 
-export default FutureWeatherCard
+export default FutureWeatherCard;

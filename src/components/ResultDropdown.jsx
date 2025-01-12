@@ -1,10 +1,7 @@
-import React from 'react'
-
 const ResultDropdown = ({ setLocationId, setQuery, filteredResults }) => {
 
 	const removeBlanks = (strArr) => {
 		let location = [];
-		console.log(strArr);
 		for (let str of strArr) {
 			str && location.push(str.trim());
 		}
@@ -20,7 +17,8 @@ const ResultDropdown = ({ setLocationId, setQuery, filteredResults }) => {
 							key={index}
 							className='px-4 py-2 cursor-pointer hover:bg-gray-100'
 							onClick={() => {
-								setQuery(`${removeBlanks([location.name, location.admin1, location.admin2, location.country])}`); // Set query to the clicked item's name
+								// Set query to the clicked item's name
+								setQuery(`${removeBlanks([location.name, location.admin1, location.admin2, location.country])}`);
 								setLocationId(location);
 							}}
 						>
@@ -33,4 +31,4 @@ const ResultDropdown = ({ setLocationId, setQuery, filteredResults }) => {
 	)
 }
 
-export default ResultDropdown
+export default ResultDropdown;

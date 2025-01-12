@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ seasonImg, season, startDate }) => {
+const SeasonCard = ({ seasonImg, season, startDate }) => {
   return (
     <div className='font-dancing max-w-[15rem] mt-[1rem] m-[0.25rem] text-center'>
         <img src={ seasonImg } alt={ season } />
@@ -10,4 +10,4 @@ const Card = ({ seasonImg, season, startDate }) => {
   )
 }
 
-export default Card
+export default SeasonCard;

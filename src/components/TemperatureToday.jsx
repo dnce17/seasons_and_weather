@@ -4,6 +4,7 @@ import { FaQuestion } from "react-icons/fa";
 
 const TemperatureToday = ({ weatherData }) => {
   let icon;
+  // Get weather icon based on today's weather code
   if (weatherData) {
     for (const item in weatherCategories) {
       const category = weatherCategories[item];

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 
@@ -10,7 +9,7 @@ const Navbar = () => {
   // Always show nav bar on large screen
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-  // Remember if nav bar was visible when users moves b/w large and small screen
+  // Remembers if nav bar was visible when users moves b/w large and small screen
   const [toggleStatus, setToggleStatus] = useState(false);
 
   const toggleNav = () => {
@@ -34,16 +33,16 @@ const Navbar = () => {
       window.removeEventListener('resize', handleNavResize);
     };
   }, []);
-  
+
   return (
     <div className='py-2.5 md:flex md:justify-center md:items-center'>
       <div className='flex justify-center items-center md:left-1/2'>
-        <GiHamburgerMenu className='absolute left-4 cursor-pointer md:hidden' size={ 25 } onClick={ toggleNav } />
+        <GiHamburgerMenu className='absolute left-4 cursor-pointer md:hidden' size={25} onClick={toggleNav} />
         <NavLink to='/' className='select-none'>
-            <img src={ SeasonsLogo } className='w-56 no-underline' alt='all four seasons' />
+          <img src={SeasonsLogo} className='w-56 no-underline' alt='all four seasons' />
         </NavLink>
       </div>
-      { (toggleStatus || isLargeScreen) && (
+      {(toggleStatus || isLargeScreen) && (
         <nav className='flex justify-center md:absolute md:right-0'>
           <ul className='md:flex md:self-center'>
             <li><NavLink to='/' className='mr-5'>Seasons</NavLink></li>
@@ -55,4 +54,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
