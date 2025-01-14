@@ -14,7 +14,7 @@ const WeatherPage = () => {
 
   return (
     <div className='bg-[url("src/assets/imgs/weather_bg.jpg")] bg-cover text-slate-200'>
-      <div className='bg-slate-700 bg-opacity-30 pt-8'>
+      <div className='bg-slate-700 bg-opacity-30 py-8'>
         <SearchBar setWeatherData={setWeatherData} />
       </div>
       <div className='bg-slate-700 bg-opacity-30 md:flex'>

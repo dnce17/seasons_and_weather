@@ -78,18 +78,18 @@ const SearchBar = ({ setWeatherData }) => {
   }
 
   return (
-    <div className='relative max-w-md mx-auto text-black'>
+    <div className='relative max-w-md mx-auto text-black px-2'>
       {/* Search Input */}
-      <form onSubmit={ weatherFetch }>
+      <form onSubmit={ weatherFetch } className='flex'>
         <input
           type='text'
           value={ query }
           onChange={ (e) => setQuery(e.target.value) } // Update query state
           placeholder='Search location'
-          className='w-full rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          className='w-full rounded-l-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
         />
         <button
-          className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline'
+          className='bg-sky-400 rounded-r-xl hover:bg-sky-500 text-slate-100 font-bold py-2 px-4 focus:outline-none focus:shadow-outline'
           type='submit'
         >
           Search
