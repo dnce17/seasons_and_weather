@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ResultDropdown from './ResultDropdown';
+import { removeBlanks } from '../../helpers';
 
 const SearchBar = ({ setWeatherData }) => {
   const [data, setData] = useState([]); // State to hold JSON data
@@ -8,13 +9,19 @@ const SearchBar = ({ setWeatherData }) => {
   const [query, setQuery] = useState(''); // Save search input
   const [filteredResults, setFilteredResults] = useState([]);
 
-  // Fetch JSON data on component mount
+  // Fetch JSON weather data on component mount
   useEffect(() => {
 		const fetchLocations = async () => {
 			try {
-        const geocodingUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${ query }&count=20&language=en&format=json`;
+        const geocodingUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${ query.match(/[a-zA-Z]*/) }&count=100&language=en&format=json`;
 				const res = await fetch(geocodingUrl);
 				const data = await res.json();
+        
+        // Add whole address to data (e.g. city, state, country), so it appears if user types out full
+        for (const location in data.results) {
+          const record = data.results[location];
+          record.address = removeBlanks([record.name, record.admin1, record.country]);
+        }
 
         Array.isArray(data.results) ? setData(data.results) : setData([]);
 
@@ -31,9 +38,9 @@ const SearchBar = ({ setWeatherData }) => {
   useEffect(() => {
     if (query) {
       const results = data.filter((item) =>
-        item.name.toLowerCase().includes(query.toLowerCase())
+        item.address.toLowerCase().includes(query.toLowerCase())
       );
-
+      
       setFilteredResults(results);
     } 
     else {
@@ -64,7 +71,6 @@ const SearchBar = ({ setWeatherData }) => {
       // Add location name to JSON
       data.name = locationData.name;
       setWeatherData(data);
-      console.log(data);
 
     } catch (error) {
       console.log('Error fetching weather data', error);

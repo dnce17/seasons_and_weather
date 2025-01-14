@@ -14,6 +14,14 @@ const toAnalogTime = (timestamp) => {
     return analogTime;
 }
 
+const removeBlanks = (strArr) => {
+  let location = [];
+  for (let str of strArr) {
+    str && location.push(str.trim());
+  }
+  return location.join(', ');
+}
+
 const weatherCategories = {
     Sunny: {
       codes: [0],
@@ -42,4 +50,4 @@ const weatherCategories = {
   };
 
 
-export { toAnalogTime, weatherCategories};
+export { toAnalogTime, removeBlanks, weatherCategories};

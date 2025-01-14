@@ -1,13 +1,6 @@
+import { removeBlanks } from "../../helpers";
+
 const ResultDropdown = ({ setLocationId, setQuery, filteredResults }) => {
-
-	const removeBlanks = (strArr) => {
-		let location = [];
-		for (let str of strArr) {
-			str && location.push(str.trim());
-		}
-		return location.join(', ');
-	}
-
 	return (
 		<>
 			{filteredResults.length > 0 && (
@@ -18,11 +11,11 @@ const ResultDropdown = ({ setLocationId, setQuery, filteredResults }) => {
 							className='px-4 py-2 cursor-pointer hover:bg-gray-100'
 							onClick={() => {
 								// Set query to the clicked item's name
-								setQuery(`${removeBlanks([location.name, location.admin1, location.admin2, location.country])}`);
+								setQuery(`${removeBlanks([location.name, location.admin1, location.country])}`);
 								setLocationId(location);
 							}}
 						>
-							{removeBlanks([location.name, location.admin1, location.admin2, location.country])}
+							{removeBlanks([location.name, location.admin1, location.country])}
 						</div>
 					))}
 				</div>
