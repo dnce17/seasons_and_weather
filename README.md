@@ -9,6 +9,16 @@ Currently, two official plugins are available:
 
 ## Notes
 * Added an address to fetched data, so user can search full address and the autocomplete will still work
+* Adding `e.preventDefault` to `onMouseDown` prevents the autocomplete from disappearing when you click on an option. It will ONLY disappear if you click outside the input box and filtered result dropdown. 
+    * Why Does e.preventDefault() on mousedown Stop onBlur?
+        * The onBlur event isn’t directly affected by e.preventDefault() in onMouseDown. What’s happening is this:
+            1. onMouseDown default behavior includes a focus change:
+                * When you click on another element, the browser typically moves focus to that element.
+                * As part of this focus change, the previously focused element loses focus, triggering onBlur for the old element.
+            2. Calling e.preventDefault() interrupts the focus change:
+                * By preventing the default mousedown behavior, the browser does not perform the focus change.
+                * Without a focus change, the previously focused element does not lose focus, and its onBlur event is not triggered.
+
 
 ## Credits
 * Website Design - https://goodjiveet.best/product_details/17403159.html

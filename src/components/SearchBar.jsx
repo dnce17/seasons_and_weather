@@ -8,15 +8,16 @@ const SearchBar = ({ setWeatherData }) => {
   const [locationData, setLocationData] = useState(); // Save specific location for fetching weather
   const [query, setQuery] = useState(''); // Save search input
   const [filteredResults, setFilteredResults] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   // Fetch JSON weather data on component mount
   useEffect(() => {
-		const fetchLocations = async () => {
-			try {
-        const geocodingUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${ query.match(/[a-zA-Z]*/) }&count=100&language=en&format=json`;
-				const res = await fetch(geocodingUrl);
-				const data = await res.json();
-        
+    const fetchLocations = async () => {
+      try {
+        const geocodingUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${query.match(/[a-zA-Z]*/)}&count=100&language=en&format=json`;
+        const res = await fetch(geocodingUrl);
+        const data = await res.json();
+
         // Add whole address to data (e.g. city, state, country), so it appears if user types out full
         for (const location in data.results) {
           const record = data.results[location];
@@ -25,12 +26,12 @@ const SearchBar = ({ setWeatherData }) => {
 
         Array.isArray(data.results) ? setData(data.results) : setData([]);
 
-			} catch (error) {
-				console.log('Error fetching geocoding data', error);
-			}
-		}
+      } catch (error) {
+        console.log('Error fetching geocoding data', error);
+      }
+    }
 
-		fetchLocations();
+    fetchLocations();
 
   }, [query]);
 
@@ -40,9 +41,9 @@ const SearchBar = ({ setWeatherData }) => {
       const results = data.filter((item) =>
         item.address.toLowerCase().includes(query.toLowerCase())
       );
-      
+
       setFilteredResults(results);
-    } 
+    }
     else {
       setFilteredResults([]);
     }
@@ -51,7 +52,7 @@ const SearchBar = ({ setWeatherData }) => {
   const weatherFetch = async (e) => {
     e.preventDefault();
     console.log('submit');
-    
+
     try {
       const weatherUrl = `
         https://api.open-meteo.com/v1/forecast?
@@ -64,7 +65,7 @@ const SearchBar = ({ setWeatherData }) => {
         wind_speed_unit=mph&
         timezone=auto
       `.replace(/\s/g, '');
-      
+
       const res = await fetch(weatherUrl);
       const data = await res.json();
 
@@ -80,11 +81,13 @@ const SearchBar = ({ setWeatherData }) => {
   return (
     <div className='relative max-w-md mx-auto text-black px-2'>
       {/* Search Input */}
-      <form onSubmit={ weatherFetch } className='flex'>
+      <form onSubmit={weatherFetch} className='flex'>
         <input
           type='text'
-          value={ query }
-          onChange={ (e) => setQuery(e.target.value) } // Update query state
+          value={query}
+          onChange={(e) => setQuery(e.target.value)} // Update query state
+          onFocus={() => setShowDropdown(true)}
+          onBlur={() => setShowDropdown(false)}
           placeholder='Search location'
           className='w-full rounded-l-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
         />
@@ -96,7 +99,9 @@ const SearchBar = ({ setWeatherData }) => {
         </button>
       </form>
 
-      <ResultDropdown setLocationId={ setLocationData } setQuery={ setQuery } filteredResults={ filteredResults } />
+      {showDropdown && (
+        <ResultDropdown setLocationData={ setLocationData } setQuery={ setQuery } filteredResults={ filteredResults } setShowDropdown={ setShowDropdown } />
+      )}
 
     </div>
   );

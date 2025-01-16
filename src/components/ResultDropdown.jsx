@@ -1,6 +1,6 @@
 import { removeBlanks } from "../../helpers";
 
-const ResultDropdown = ({ setLocationId, setQuery, filteredResults }) => {
+const ResultDropdown = ({ setLocationData, setQuery, filteredResults, setShowDropdown }) => {
 	return (
 		<>
 			{filteredResults.length > 0 && (
@@ -9,10 +9,11 @@ const ResultDropdown = ({ setLocationId, setQuery, filteredResults }) => {
 						<div
 							key={index}
 							className='px-4 py-2 cursor-pointer hover:bg-gray-100'
-							onClick={() => {
+							onMouseDown={(e) => {
 								// Set query to the clicked item's name
+								e.preventDefault();
 								setQuery(`${removeBlanks([location.name, location.admin1, location.country])}`);
-								setLocationId(location);
+								setLocationData(location);
 							}}
 						>
 							{removeBlanks([location.name, location.admin1, location.country])}
