@@ -18,6 +18,8 @@ Currently, two official plugins are available:
             2. Calling e.preventDefault() interrupts the focus change:
                 * By preventing the default mousedown behavior, the browser does not perform the focus change.
                 * Without a focus change, the previously focused element does not lose focus, and its onBlur event is not triggered.
+* Issue:
+    * `setLocationData('')` is used b/c when you click on an autocomplete, the address is saved. If you delete the query and click the search, it will still search whatever you had clicked for autocomplete
 
 
 ## Credits

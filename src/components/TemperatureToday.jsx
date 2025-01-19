@@ -19,7 +19,7 @@ const TemperatureToday = ({ weatherData }) => {
       <h1 className='text-4xl font-bold text-center'>
         {
           weatherData
-            ? weatherData.name
+            ? weatherData.displayName
             : 'Search a location to get started'
         }
       </h1>
