@@ -7,7 +7,7 @@ import CurrentConditions from '../components/CurrentConditions';
 import ForecastFuture from '../components/ForecastFuture';
 
 import { weatherCategories } from '../../helpers';
-import DefaultBg from '../assets/imgs/partly_cloudy_bg.jpg';
+import DefaultBg from '../assets/imgs/weather_bgs/partly_cloudy_bg.jpg';
 
 // https://api.open-meteo.com/v1/forecast?latitude=40.7684&longitude=-73.7771&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&hourly=temperature_2m,weather_code,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,uv_index_max,precipitation_probability_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto
 

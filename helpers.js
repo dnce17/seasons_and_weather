@@ -4,11 +4,11 @@ import { TiWeatherCloudy } from 'react-icons/ti';
 import { GiSnowing } from 'react-icons/gi';
 import { IoRainy, IoThunderstorm } from 'react-icons/io5';
 
-import SunnyBg from './src/assets/imgs/partly_cloudy_bg.jpg';
-import CloudyBg from './src/assets/imgs/cloudy_bg.jpg';
-import RainyBg from './src/assets/imgs/rainy_bg.jpg';
-import SnowyBg from './src/assets/imgs/snowy_bg.jpg';
-import ThunderstormBg from './src/assets/imgs/thunderstorm_bg.jpg';
+import SunnyBg from './src/assets/imgs/weather_bgs/partly_cloudy_bg.jpg';
+import CloudyBg from './src/assets/imgs/weather_bgs/cloudy_bg.jpg';
+import RainyBg from './src/assets/imgs/weather_bgs/rainy_bg.jpg';
+import SnowyBg from './src/assets/imgs/weather_bgs/snowy_bg.jpg';
+import ThunderstormBg from './src/assets/imgs/weather_bgs/thunderstorm_bg.jpg';
 
 const toAnalogTime = (timestamp) => {
   const date = new Date(timestamp);

@@ -1,9 +1,9 @@
 import React from 'react';
 import Hero from './Hero';
-import WinterHero from '../assets/imgs/winter_hero.jpg';
-import SpringHero from '../assets/imgs/spring_hero.jpg';
-import SummerHero from '../assets/imgs/summer_hero.jpg';
-import AutumnHero from '../assets/imgs/autumn_hero.jpg';
+import WinterHero from '../assets/imgs/heros/winter_hero.jpg';
+import SpringHero from '../assets/imgs/heros/spring_hero.jpg';
+import SummerHero from '../assets/imgs/heros/summer_hero.jpg';
+import AutumnHero from '../assets/imgs/heros/autumn_hero.jpg';
 
 const HeroSelector = () => {
   // CAUTION: Dates are ZERO-INDEXED, so Jan = 0, Dec = 11
