@@ -35,7 +35,7 @@ const ForecastFuture = ({ weatherData }) => {
 
   return (
     <>
-      <section className='px-3 bg-slate-800 bg-opacity-50 rounded-xl md:h-full md:flex md:flex-col md:justify-evenly'>
+      <section className='p-3 bg-slate-800 bg-opacity-50 rounded-xl md:pt-0 md:h-full md:flex md:flex-col md:justify-evenly'>
         <h1 className='text-xl font-bold pb-2'>7-Day Forecast</h1>
           {Array.from({ length: 7 }, (_, i) =>
             weatherData

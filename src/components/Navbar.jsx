@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className='flex justify-center items-center md:left-1/2'>
         <GiHamburgerMenu className='absolute left-4 cursor-pointer md:hidden' size={25} onClick={toggleNav} />
         <NavLink to='/' className='select-none'>
-          <img src={SeasonsLogo} className='w-56 no-underline' alt='all four seasons' />
+          <img src={SeasonsLogo} className='w-52 no-underline' alt='all four seasons' />
         </NavLink>
       </div>
       {(toggleStatus || isLargeScreen) && (

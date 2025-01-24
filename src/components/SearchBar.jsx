@@ -85,23 +85,21 @@ const SearchBar = ({ setWeatherData }) => {
   }, [submit]);
 
   return (
-    <div className='relative max-w-md mx-auto text-black px-2'>
+    <div className='relative max-w-md mx-auto text-black'>
       {/* Search Input */}
-      <form className='flex'>
-        <input
-          type='text'
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value); // Update query state
-            setLocationData(''); // Reset location data
-          }}
-          onFocus={() => setShowDropdown(true)}
-          onBlur={() => setShowDropdown(false)}
-          placeholder='Search location'
-          className='w-full rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-          required
-        />
-      </form>
+      <input
+        type='text'
+        value={query}
+        onChange={(e) => {
+          setQuery(e.target.value); // Update query state
+          setLocationData(''); // Reset location data
+        }}
+        onFocus={() => setShowDropdown(true)}
+        onBlur={() => setShowDropdown(false)}
+        placeholder='Search location'
+        className='w-full rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+        required
+      />
 
       {showDropdown && (
         <ResultDropdown
