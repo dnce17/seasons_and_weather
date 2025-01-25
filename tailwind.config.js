@@ -13,7 +13,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
         playfairDisplay: ['Playfair Display', 'sans-serif'],
         lora: ['Lora', 'sans-serif'],
-        roboto: ['Roboto', 'serif']
+        roboto: ['Roboto', 'serif'],
       },
     },
   },

@@ -1,6 +1,5 @@
-import React from 'react'
 import ProduceBg from '../assets/imgs/produce_bg.png';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const FindSeasonalProduce = () => {
   return (

@@ -12,11 +12,11 @@ const HeroSelector = () => {
   // FOR TESTING
   // const today = new Date('2024-12-22'); // YYYY-MM-DD format
   // const today = new Date('2024-09-23'); // YYYY-MM-DD format
-  // const today = new Date('2024-03-23'); // YYYY-MM-DD format
+  const today = new Date('2024-03-23'); // YYYY-MM-DD format
   // const today = new Date('2024-06-23'); // YYYY-MM-DD format
   // const today = new Date('2024-09-22'); // YYYY-MM-DD format
 
-  const today = new Date();
+  // const today = new Date();
   const year = today.getFullYear();
 
   const seasonDates = {
