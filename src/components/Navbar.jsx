@@ -45,7 +45,8 @@ const Navbar = () => {
       {(toggleStatus || isLargeScreen) && (
         <nav className='flex justify-center md:absolute md:right-0'>
           <ul className='md:flex md:self-center'>
-            <li><NavLink to='/' className='mr-5'>Seasons</NavLink></li>
+            <li><NavLink to='/' className='mr-5'>Home</NavLink></li>
+            <li><NavLink to='/seasonal-produce' className='mr-5'>Seasonal Produce</NavLink></li>
             <li><NavLink to='/weather' className='mr-5'>Weather</NavLink></li>
           </ul>
         </nav>
