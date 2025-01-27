@@ -70,6 +70,95 @@
           ["Turnips", "src/assets/imgs/vegetables/turnips.jpg"]
         ]
       }
+    },
+    "summer": {
+      "produce": {
+        "fruits": [
+          ["Apples", "src/assets/imgs/fruits/apples.jpg"],
+          ["Apricots", "src/assets/imgs/fruits/apricots.jpg"],
+          ["Avocados", "src/assets/imgs/fruits/avocados.jpg"],
+          ["Bananas", "src/assets/imgs/fruits/bananas.jpg"],
+          ["Blackberries", "src/assets/imgs/fruits/blackberries.jpg"],
+          ["Blueberries", "src/assets/imgs/fruits/blueberries.jpg"],
+          ["Cantaloupes", "src/assets/imgs/fruits/cantaloupes.jpg"],
+          ["Cherries", "src/assets/imgs/fruits/cherries.jpg"],
+          ["Honeydew Melons", "src/assets/imgs/fruits/honeydew_melons.jpg"],
+          ["Lemons", "src/assets/imgs/fruits/lemons.jpg"],
+          ["Limes", "src/assets/imgs/fruits/limes.jpg"],
+          ["Mangos", "src/assets/imgs/fruits/mangos.jpg"],
+          ["Peaches", "src/assets/imgs/fruits/peaches.jpg"],
+          ["Plums", "src/assets/imgs/fruits/plums.jpg"],
+          ["Raspberries", "src/assets/imgs/fruits/raspberries.jpg"],
+          ["Strawberries", "src/assets/imgs/fruits/strawberries.jpg"],
+          ["Watermelons", "src/assets/imgs/fruits/watermelons.jpg"]
+        ],
+        "vegetables": [
+          ["Beets", "src/assets/imgs/vegetables/beets.jpg"],
+          ["Bell Peppers", "src/assets/imgs/vegetables/bell_peppers.jpg"],
+          ["Carrots", "src/assets/imgs/vegetables/carrots.jpg"],
+          ["Celery", "src/assets/imgs/vegetables/celery.jpg"],
+          ["Corn", "src/assets/imgs/vegetables/corn.jpg"],
+          ["Cucumbers", "src/assets/imgs/vegetables/cucumbers.jpg"],
+          ["Eggplants", "src/assets/imgs/vegetables/eggplants.jpg"],
+          ["Garlic", "src/assets/imgs/vegetables/garlic.jpg"],
+          ["Green Beans", "src/assets/imgs/vegetables/green_beans.jpg"],
+          ["Herbs", "src/assets/imgs/vegetables/herbs.jpg"],
+          ["Lima Beans", "src/assets/imgs/vegetables/lima_beans.jpg"],
+          ["Okra", "src/assets/imgs/vegetables/okra.jpg"],
+          ["Summer Squash", "src/assets/imgs/vegetables/summer_squash.jpg"],
+          ["Tomatillos", "src/assets/imgs/vegetables/tomatillos.jpg"],
+          ["Tomatoes", "src/assets/imgs/vegetables/tomatoes.jpg"],
+          ["Zucchini", "src/assets/imgs/vegetables/zucchini.jpg"]
+        ]
+      }
+    },
+    "autumn": {
+      "produce": {
+        "fruits": [
+          ["Apples", "src/assets/imgs/fruits/apples.jpg"],
+          ["Bananas", "src/assets/imgs/fruits/bananas.jpg"],
+          ["Cranberries", "src/assets/imgs/fruits/cranberries.jpg"],
+          ["Grapes", "src/assets/imgs/fruits/grapes.jpg"],
+          ["Kiwis", "src/assets/imgs/fruits/kiwis.jpg"],
+          ["Lemons", "src/assets/imgs/fruits/lemons.jpg"],
+          ["Limes", "src/assets/imgs/fruits/limes.jpg"],
+          ["Mangos", "src/assets/imgs/fruits/mangos.jpg"],
+          ["Pears", "src/assets/imgs/fruits/pears.jpg"],
+          ["Pineapples", "src/assets/imgs/fruits/pineapples.jpg"],
+          ["Pomegranates", "src/assets/imgs/fruits/pomegranates.jpg"],
+          ["Raspberries", "src/assets/imgs/fruits/raspberries.jpg"]
+        ],
+        "vegetables": [
+          ["Beets", "src/assets/imgs/vegetables/beets.jpg"],
+          ["Bell Peppers", "src/assets/imgs/vegetables/bell_peppers.jpg"],
+          ["Broccoli", "src/assets/imgs/vegetables/broccoli.jpg"],
+          ["Brussels Sprouts", "src/assets/imgs/vegetables/brussels_sprouts.jpg"],
+          ["Cabbage", "src/assets/imgs/vegetables/cabbage.jpg"],
+          ["Carrots", "src/assets/imgs/vegetables/carrots.jpg"],
+          ["Cauliflowers", "src/assets/imgs/vegetables/cauliflowers.jpg"],
+          ["Celery", "src/assets/imgs/vegetables/celery.jpg"],
+          ["Collard Greens", "src/assets/imgs/vegetables/collard_greens.jpg"],
+          ["Garlic", "src/assets/imgs/vegetables/garlic.jpg"],
+          ["Ginger", "src/assets/imgs/vegetables/ginger.jpg"],
+          ["Green Beans", "src/assets/imgs/vegetables/green_beans.jpg"],
+          ["Herbs", "src/assets/imgs/vegetables/herbs.jpg"],
+          ["Kale", "src/assets/imgs/vegetables/kale.jpg"],
+          ["Lettuce", "src/assets/imgs/vegetables/lettuce.jpg"],
+          ["Mushrooms", "src/assets/imgs/vegetables/mushrooms.jpg"],
+          ["Onions", "src/assets/imgs/vegetables/onions.jpg"],
+          ["Parsnips", "src/assets/imgs/vegetables/parsnips.jpg"],
+          ["Peas", "src/assets/imgs/vegetables/peas.jpg"],
+          ["Potatoes", "src/assets/imgs/vegetables/potatoes.jpg"],
+          ["Pumpkins", "src/assets/imgs/vegetables/pumpkins.jpg"],
+          ["Radishes", "src/assets/imgs/vegetables/radishes.jpg"],
+          ["Rutabagas", "src/assets/imgs/vegetables/rutabagas.jpg"],
+          ["Spinach", "src/assets/imgs/vegetables/spinach.jpg"],
+          ["Sweet Potatoes & Yams", "src/assets/imgs/vegetables/sweet_potatoes_yams.jpg"],
+          ["Swiss Chard", "src/assets/imgs/vegetables/swiss_chard.jpg"],
+          ["Turnips", "src/assets/imgs/vegetables/turnips.jpg"],
+          ["Winter Squash", "src/assets/imgs/vegetables/winter_squash.jpg"]
+        ]
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-const ProduceCard = ({ imgPath, alt, produceName }) => {
+const ProduceCard = ({ header, imgPath, alt, produceName }) => {
   return (
     <div className='w-fit relative'>
       <img src={imgPath} alt={alt} className='drop-shadow-md' />
