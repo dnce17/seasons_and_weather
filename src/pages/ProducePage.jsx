@@ -6,7 +6,7 @@ const ProducePage = () => {
 
   return (
     <section className='bg-stone-100'>
-      <div className='mx-auto max-w-[90%] md:max-w-[80%]'>
+      <div className='mx-auto max-w-[90%] md:max-w-[70%]'>
         <div className='mx-auto max-w-[90%] md:max-w-[50%] pt-4'>
           <ul className='flex justify-evenly'>
             <li

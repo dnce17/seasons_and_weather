@@ -38,27 +38,28 @@ const WeatherPage = () => {
 
   return (
     <div className='overlay bg-cover text-slate-200 transition-all duration-200 opacity-100 md:min-h-screen md:w-full' style={{ backgroundImage: `url(${weatherBg})` }} >
-      <div className='bg-opacity-30 py-8'>
-        <SearchBar setWeatherData={setWeatherData} />
-      </div>
-      <div className='bg-opacity-30 md:flex'>
-        <article className='md:max-w-[60%] md:w-full'>
-          <section className='mx-2 py-4'>
-            <TemperatureToday weatherData={weatherData} />
-          </section>
-          <section className='mx-2 pb-6'>
-            <ForecastToday weatherData={weatherData} />
-          </section>
-          <section className='mx-2 pb-6'>
-            <CurrentConditions weatherData={weatherData} />
-          </section>
-        </article>
-
-        <article className='md:max-w-[40%] md:w-full'>
-          <section className='mx-2 pb-6 md:h-full'>
-            <ForecastFuture weatherData={weatherData} />
-          </section>
-        </article>
+      <div className='max-w-[95%] mx-auto'>
+        <div className='bg-opacity-30 py-8'>
+          <SearchBar setWeatherData={setWeatherData} />
+        </div>
+        <div className='bg-opacity-30 md:flex'>
+          <article className='md:max-w-[60%] md:w-full'>
+            <section className='mx-2 py-4'>
+              <TemperatureToday weatherData={weatherData} />
+            </section>
+            <section className='mx-2 pb-6'>
+              <ForecastToday weatherData={weatherData} />
+            </section>
+            <section className='mx-2 pb-6'>
+              <CurrentConditions weatherData={weatherData} />
+            </section>
+          </article>
+          <article className='md:max-w-[40%] md:w-full'>
+            <section className='mx-2 pb-6 md:h-full'>
+              <ForecastFuture weatherData={weatherData} />
+            </section>
+          </article>
+        </div>
       </div>
     </div>
   )
