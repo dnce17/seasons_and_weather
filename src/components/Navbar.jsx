@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
       {(toggleStatus || isLargeScreen) && (
         <nav className='flex justify-center md:absolute md:right-0'>
-          <ul className='flex flex-col items-center font-medium md:flex-row'>
+          <ul className='flex flex-col items-center font-montserrat text-[0.95rem] tracking-tight md:flex-row'>
             <li><NavLink to='/' className='mr-4'>Home</NavLink></li>
             <li><NavLink to='/seasonal-produce' className='mr-4'>Seasonal Produce</NavLink></li>
             <li><NavLink to='/weather' className='mr-4'>Weather</NavLink></li>

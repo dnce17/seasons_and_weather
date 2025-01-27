@@ -18,4 +18,4 @@ const FindSeasonalProduce = () => {
   )
 }
 
-export default FindSeasonalProduce
+export default FindSeasonalProduce;
