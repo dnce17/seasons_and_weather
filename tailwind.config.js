@@ -7,13 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        livvic: ['Livvic', 'sans-serif'],
-        dancing: ['Dancing Script', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         playfairDisplay: ['Playfair Display', 'sans-serif'],
         lora: ['Lora', 'sans-serif'],
-        roboto: ['Roboto', 'serif'],
       },
     },
   },
