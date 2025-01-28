@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import SeasonsLogo from '../assets/imgs/seasons_logo.png'
+import SeasonsLogo from '../assets/imgs/seasons_logo.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {

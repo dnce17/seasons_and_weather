@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import ResultDropdown from './ResultDropdown';
 import { removeBlanks } from '../../helpers';

@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from './Hero';
 import WinterHero from '../assets/imgs/heros/winter_hero.jpg';
 import SpringHero from '../assets/imgs/heros/spring_hero.jpg';
@@ -6,17 +5,7 @@ import SummerHero from '../assets/imgs/heros/summer_hero.jpg';
 import AutumnHero from '../assets/imgs/heros/autumn_hero.jpg';
 
 const HeroSelector = () => {
-  // CAUTION: Dates are ZERO-INDEXED, so Jan = 0, Dec = 11
-  // Entering 12 works, but .getMonth() returns 11
-
-  // FOR TESTING
-  // const today = new Date('2024-12-22'); // YYYY-MM-DD format
-  // const today = new Date('2024-09-23'); // YYYY-MM-DD format
-  const today = new Date('2024-03-23'); // YYYY-MM-DD format
-  // const today = new Date('2024-06-23'); // YYYY-MM-DD format
-  // const today = new Date('2024-09-22'); // YYYY-MM-DD format
-
-  // const today = new Date();
+  const today = new Date();
   const year = today.getFullYear();
 
   const seasonDates = {

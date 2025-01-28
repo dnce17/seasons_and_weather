@@ -9,4 +9,4 @@ const ProduceCard = ({ header, imgPath, alt, produceName }) => {
   )
 }
 
-export default ProduceCard
+export default ProduceCard;
