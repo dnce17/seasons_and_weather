@@ -11,10 +11,10 @@ const ProducePage = () => {
       <div className='mx-auto max-w-[90%] md:max-w-[70%]'>
         <div className='mx-auto max-w-[90%] md:max-w-[50%] pt-4'>
           <ul className='flex justify-evenly'>
-            <ProduceNavBar season='winter' seasonState={season} setSeason={setSeason} color='sky-300' />
-            <ProduceNavBar season='spring' seasonState={season} setSeason={setSeason} color='pink-400' />
-            <ProduceNavBar season='summer' seasonState={season} setSeason={setSeason} color='orange-300' />
-            <ProduceNavBar season='autumn' seasonState={season} setSeason={setSeason} color='orange-600' />
+            <ProduceNavBar season='winter' seasonState={season} setSeason={setSeason} />
+            <ProduceNavBar season='spring' seasonState={season} setSeason={setSeason} />
+            <ProduceNavBar season='summer' seasonState={season} setSeason={setSeason} />
+            <ProduceNavBar season='autumn' seasonState={season} setSeason={setSeason} />
           </ul>
         </div>
         <ProduceCards season={season} />

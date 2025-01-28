@@ -9,7 +9,7 @@ const ProduceCards = ({ season }) => {
       {/* h1 - capitalizes first letter */}
       <h1 className='text-2xl font-bold font-lora md:text-[1.8rem] pb-2 pt-6'>
         {season == 'autumn'
-          ? `${season.charAt(0).toUpperCase() + season.slice(1)}/Fall`
+          ? 'Autumn/Fall'
           : season.charAt(0).toUpperCase() + season.slice(1)
         }
       </h1>
