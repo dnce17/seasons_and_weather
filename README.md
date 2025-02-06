@@ -8,7 +8,7 @@ A React-based web app that provides information on the seasons and weather.
 ## Technologies Used
 * React 18
 * Vite
-* Tailwind
+* Tailwind V3.4.17
 
 ## Open-Meteo APIs Used
 * [Weather Forecast API](https://open-meteo.com/en/docs)
