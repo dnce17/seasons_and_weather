@@ -22,3 +22,6 @@ A React-based web app that provides information on the seasons and weather.
 * Pexel
     * Free stock photos and videos can be searched here
     * https://www.pexels.com/
+* Sourab Pramanik
+    * [Nginx Configuration](https://dev.to/sourabpramanik/deploy-your-react-app-using-docker-and-nginx-14lk)
+        * Helped prevent 404 error from refreshing a page that is not the home (index) page
