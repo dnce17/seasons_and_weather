@@ -8,6 +8,8 @@ A React-based web app that provides information on the seasons and weather.
 ## Website Demo
 https://react-seasons-and-weather.greentree-09dfd09f.centralus.azurecontainerapps.io/
 
+https://github.com/user-attachments/assets/31001d14-4d28-4e1d-b90e-046dfc570657
+
 ## Technologies Used
 * React 18
 * Vite
