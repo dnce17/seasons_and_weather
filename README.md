@@ -5,8 +5,9 @@ A React-based web app that provides information on the seasons and weather.
 * **Seasons**: Info is shown on current season + date range and seasonal produce for all seasons
 * **Weather**: Using the Open-Meteo API, users can fetch real-time weather data for any location, including today’s weather, 7-day forecast, and other conditions.
 
-## Website Demo
-https://react-seasons-and-weather.greentree-09dfd09f.centralus.azurecontainerapps.io/
+## Demo Link
+#### NOTE: Uses free tier, so may take a few seconds to 1 minute for the initial load
+https://seasons-and-weather.onrender.com/
 
 https://github.com/user-attachments/assets/31001d14-4d28-4e1d-b90e-046dfc570657
 
@@ -14,7 +15,9 @@ https://github.com/user-attachments/assets/31001d14-4d28-4e1d-b90e-046dfc570657
 * React 18
 * Vite
 * Tailwind V3.4.17
-* Docker + Microsoft Azure (for deployment)
+* Docker
+* Render (for deployment)
+   * NOTE: Microsoft Azure was originally used, but is no longer active due to expiration of student credits
 
 ## Open-Meteo APIs Used
 * [Weather Forecast API](https://open-meteo.com/en/docs)
