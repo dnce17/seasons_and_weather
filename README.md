@@ -51,7 +51,7 @@ Allows users to search for a location and view real-time weather data using the 
 ### Demo
 - **Live Demo:** [View app](https://seasons-and-weather.onrender.com/)  
    - **NOTE: Hosting uses free tier, so may take a few seconds to 1 minute for the initial load**. If waiting for the live demo might be inconvenient, feel free to view the video or expand the screenshots below.
-- **Video Demo:** [Watch a walkthrough](https://github-production-user-asset-6210df.s3.amazonaws.com/55259337/427666338-31001d14-4d28-4e1d-b90e-046dfc570657.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260305%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260305T015038Z&X-Amz-Expires=300&X-Amz-Signature=9c2b715195e2f8abaf873090a1660d76788450ad10ad5c777ab2c207bc4303f4&X-Amz-SignedHeaders=host)
+- **Video Demo:** [Watch a walkthrough](https://github.com/user-attachments/assets/2e99bc98-5a80-4ce1-ae89-a700c51cf860)
 - **Screenshot Demo**:
    <details>
    <summary>Click to expand screenshots</summary>
