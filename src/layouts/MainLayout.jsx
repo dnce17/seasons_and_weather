@@ -2,13 +2,13 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-// Needed to allow layout to apply to pages you desired
+// Is needed to allow layout.html to appear in shared pages
 import { Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
   return (
     <>
-      {/* Components you want on many pages (e.g. <Navbar />) */}
+      {/* Components that all pages share */}
       <Navbar />
       <Outlet />
       <Footer />

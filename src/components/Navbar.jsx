@@ -28,7 +28,7 @@ const Navbar = () => {
     handleNavResize();
     window.addEventListener('resize', handleNavResize);
 
-    // Cleanup the event listener on component unmount
+    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleNavResize);
     };
